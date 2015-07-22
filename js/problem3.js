@@ -45,6 +45,9 @@ function fareForRide(distanceTraveled, timeWaiting, isNight) {
     var fare = "some amount";
 
     // write some code here!
+    fare = 20+8 * (distanceTraveled - 1) + 4 * timeWaiting
+    if (isNight)
+        fare *= 1.5
 
     changeElementText("#fare", fare);
 }
