@@ -39,7 +39,7 @@ function kiteGame(numberOfKites) {
             answer += "Ipo kaate! ";
             pass = true;
         }
-        
+
         if (!pass)
             answer += i + " ";
     }
