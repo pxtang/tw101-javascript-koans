@@ -26,4 +26,24 @@
 
 */
 
-// Write your JavaScript here
+// Copied from other problems
+function changeElementText(element, answer) {
+    $(element).text(answer);
+}
+
+
+function countMoney() {
+    changeElementText("#notes",[].slice.call(arguments).join(", "))
+    var sum = 0;
+    var validNotes = [5,10,20,50,100,500];
+
+    for (var i = 0; i < arguments.length; i++) {
+        var currentNote = arguments[i];
+        if (validNotes.indexOf(currentNote) == -1)
+            break;
+
+        sum += currentNote;
+    }
+
+    changeElementText("#sum",sum);
+}

@@ -33,4 +33,30 @@
      count: 7
  */
 
-// Write your JavaScript here
+// Copied from other problems
+function changeElementText(element, answer) {
+    $(element).text(answer);
+}
+
+function fixAdText(text) {
+    changeElementText("#origHindi",text[0].join(' '));
+    changeElementText("#origUrdu",text[1].join(' '));
+    changeElementText("#origEng",text[2].join(' '));
+
+    var fixed = "";
+    var count = 0;
+
+    for (var i = 0; i < text.length; i++) {
+
+        if (i == 1) text[i].reverse()
+
+        fixed += text[i].join(' ');
+
+        fixed += " ";
+        count += text[i].length;
+    }
+
+    changeElementText("#orig",fixed);
+    changeElementText("#fixed",fixed);
+    changeElementText("#count","count: " + count)
+}
